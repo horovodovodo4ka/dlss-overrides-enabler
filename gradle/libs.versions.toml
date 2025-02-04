@@ -1,0 +1,6 @@
+[versions]
+composeMarkdown = "1.1.0"
+
+[libraries]
+boswelja-compose-core = { group = "io.github.boswelja.markdown", name = "core", version.ref = "composeMarkdown" }
+boswelja-compose-markdown = { group = "io.github.boswelja.markdown", name = "material3", version.ref = "composeMarkdown" }
