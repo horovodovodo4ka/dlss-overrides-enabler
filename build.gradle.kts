@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "pro.horovodovodo4ka.dlssoverrides"
-version = "1.0-SNAPSHOT"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
@@ -20,8 +20,6 @@ dependencies {
     implementation(compose.material3)
 
     implementation("com.mikepenz:multiplatform-markdown-renderer-jvm:0.30.0")
-
-//    implementation("com.mikepenz:multiplatform-markdown-renderer:0.30.0")
     implementation("com.mikepenz:multiplatform-markdown-renderer-m3:0.30.0")
 }
 
@@ -32,7 +30,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Msi)
             packageName = "DLSS Overrides enabler"
-            packageVersion = "1.0.0"
+            packageVersion = "1.1.0"
             windows {
                 shortcut = true
                 menuGroup = "DLSS Overrides enabler"

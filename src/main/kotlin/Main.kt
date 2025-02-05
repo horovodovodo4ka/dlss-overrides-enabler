@@ -96,9 +96,12 @@ fun App() {
                         modifyOverrideFlag(path)
 
                         lockFile(path)
-                        showRebootDialog = true
+                        if (restartNvidiaServices()) {
+                            statusMessage = "Overrides patched and file locked."
+                        } else {
+                            showRebootDialog = true
+                        }
 
-                        statusMessage = "Overrides patched and file locked."
                     }.onFailure {
                         statusMessage = "Failed to patch file: ${it.message}"
                     }

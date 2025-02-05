@@ -62,3 +62,16 @@ fun rebootSystem(onComplete: (String) -> Unit) {
         onComplete("Failed to initiate reboot: ${it.message}")
     }
 }
+
+fun restartNvidiaServices() : Boolean {
+    try {
+        val command = "powershell -Command \"Start-Process cmd -ArgumentList '/c net stop NvContainerLocalSystem && net start NvContainerLocalSystem && net stop NVDisplay.ContainerLocalSystem && net start NVDisplay.ContainerLocalSystem' -Verb RunAs\""
+
+        val process = Runtime.getRuntime().exec(command)
+        process.waitFor()
+
+        return true
+    } catch (e: Exception) {
+        return false
+    }
+}
