@@ -12,4 +12,4 @@ The **DLSS Overrides** settings are disabled by default for "unsupported" applic
 - Press **Patch & Lock** again to lock in the changes.
 - You may need to reconfigure games in the **Nvidia App** after applying the changes.
 
-To apply the new settings, you will need to restart your computer, as the file is cached by the drivers.
+To apply the new settings, you may need to restart your computer, as the file is cached by the drivers.
